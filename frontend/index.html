@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task App SaaS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Task App SaaS</h1>
+
+    <!-- Sección de login/registro -->
+    <div id="authSection">
+        <input id="email" type="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Contraseña">
+        <br>
+        <button id="loginBtn">Login</button>
+        <button id="registerBtn">Register</button>
+    </div>
+
+    <!-- Sección de app principal (tareas) -->
+    <div id="taskSection" style="display: none;">
+        <input id="taskInput" type="text" placeholder="Nueva tarea">
+        <button id="addBtn">Add</button>
+        <ul id="taskList"></ul>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <!-- App JS -->
+    <script src="app.js"></script>
+</body>
+</html>

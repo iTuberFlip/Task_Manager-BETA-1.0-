@@ -1,0 +1,146 @@
+/* Paleta de colores */
+:root {
+    --primary: #4F46E5;       /* Azul principal */
+    --secondary: #6366F1;     /* Azul claro */
+    --background-start: #1E3A8A; /* Azul oscuro */
+    --background-end: #3B82F6;   /* Azul más claro */
+    --card: #FFFFFF;           /* Blanco para tarjetas */
+    --text: #FFFFFF;           /* Texto claro sobre fondo azul */
+    --text-dark: #111827;      /* Texto oscuro para tarjetas */
+    --text-muted: #D1D5DB;     /* Texto gris */
+    --success: #22C55E;        /* Verde para completado */
+    --danger: #EF4444;         /* Rojo para eliminar */
+    --hover: #E0E7FF;          /* Hover azul claro */
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--background-start), var(--background-end));
+    color: var(--text);
+}
+
+/* Cabecera */
+h1 {
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.2);
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+}
+
+#loginBtn, #registerBtn {
+    background-color: var(--primary);
+    color: #fff;
+    margin-right: 8px;
+}
+
+#loginBtn:hover, #registerBtn:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+#addBtn {
+    background-color: var(--primary);
+    color: #fff;
+    width: 100%;
+}
+
+#addBtn:hover {
+    background-color: var(--secondary);
+    transform: scale(1.03);
+}
+
+/* Lista de tareas */
+ul#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li.task {
+    background: var(--card);
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+li.task:hover {
+    background-color: #F3F4F6;
+}
+
+/* Checkbox */
+li.task input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Texto de tarea */
+li.task span {
+    flex: 1;
+    margin-left: 12px;
+    font-size: 15px;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+li.task.completed span {
+    text-decoration: line-through;
+    color: var(--success);
+}
+
+/* Botón eliminar */
+li.task button {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: var(--danger);
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+li.task button:hover {
+    transform: scale(1.2);
+    color: #B91C1C;
+}
+
+/* Separador */
+hr {
+    margin: 30px 0;
+    border: 0;
+    height: 1px;
+    background: #E5E7EB;
+}
