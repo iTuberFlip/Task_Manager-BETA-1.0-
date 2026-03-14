@@ -19,7 +19,7 @@ Aplicación web tipo SaaS para gestionar tareas personales, con funcionalidades 
 * **Drag & Drop** para reorganizar tareas. *TODAVIA NO FUNCIONA CORRECTEMENTE*
 * Actualización de tareas en tiempo real entre múltiples clientes.
 * Separación de **login/registro** y la **app de tareas**.
-* Frontend con paleta azul profesional y CSS moderno.
+* Frontend con paleta azul y CSS.
 * Base de datos **PostgreSQL** con Prisma ORM.
 
 ---
